@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>My Resume</title>
+    <style>
+      /* Add styles here */
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+      }
+      .header h1 {
+        font-size: 36px;
+        margin: 0;
+      }
+      .header p {
+        font-size: 24px;
+        margin: 0;
+        color: #555;
+      }
+      .header img {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+      .header a {
+        font-size: 24px;
+        color: #555;
+        text-decoration: none;
+      }
+      .header a:hover {
+        color: #000;
+      }
+      .about-me {
+        padding: 20px;
+        background-color: rgba(255,255,255,0.6);
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+      .about-me h2 {
+        font-size: 36px;
+        margin-top: 0;
+      }
+      .about-me p {
+        font-size: 24px;
+        line-height: 1.5;
+      }
+      .essays-container {
+        background-color: rgba(255,255,255,0.6);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+      .essay-box {
+        background-color: rgba(255,255,255,0.9);
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+      .menu {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+      }
+      .menu li {
+        position: relative;
+        margin-right: 20px;
+      }
+      .menu a {
+        font-size: 24px;
+        text-decoration: none;
+        color: black;
+        transition: all 0.3s ease-in-out;
+      }
+      .menu a::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to right, #ff416c, #ff4b2b);
+        transform-origin: left center;
+        transform: skewX(-30deg);
+        transition: all 0.3s ease
+  in-out;
+      }
+      .menu a:hover::before {
+        transform: skewX(0);
+        left: -100%;
+        right: 100%;
+      }
+      .frosted-glass {
+        background: linear-gradient(to bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.3));
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+      .perspective-split-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        perspective: 1000px;
+      }
+      .perspective-split-text h1 {
+        font-size: 72px;
+        margin: 0;
+        position: relative;
+        z-index: 2;
+      }
+      .perspective-split-text h1::before {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #ff4b2b;
+        mix-blend-mode: difference;
+        z-index: -1;
+        transform-origin: left center;
+        transform: rotateY(-90deg);
+        backface-visibility: hidden;
+        transition: all 1s ease-out;
+      }
+      .perspective-split-text:hover h1::before {
+        transform: rotateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Patrick James</h1>
+      <p>3rd Year student at Aalto University</p>
+      <img src="my-image.jpg" alt="My Image">
+    </div>
+    <div class="about-me">
+      <h2>About Me</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Sed in euismod enim, at pellentesque lorem. Sed laoreet 
+        libero ac libero fringilla, eu blandit eros bibendum. 
+      </p>
+    </div>
+    <div class="essays-container">
+      <h2>Projects and works</h2>
+      <div class="essay-box">
+        <h3>
+Team captain and winner of Nexi’s “Crack the Payments” challenge at Junction 2022</h3>
+        <p>
+            I wrote all of the Python code, made the PyQt5 UI, did documentation and research on the NFC ISO. 
+          The entire code project is visible on my Github page "Junction_nexiproject". 
+        </p>
+      </div>
+      <div class="essay-box">
+        <h3>Essay Title 2</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          Sed in euismod enim, at pellentesque
+          lorem. Sed laoreet 
+          libero ac libero fringilla, eu blandit eros bibendum. 
+        </p>
+      </div>
+    </div>
+    <div class="frosted-glass">
+      <h2>Contact Me</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <br><br>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+    <div class="perspective-split-text">
+      <h1 data-text="Resume">Resume</h1>
+    </div>
+  </body>
+</html>
