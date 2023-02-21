@@ -1,15 +1,20 @@
 <!DOCTYPE html>
+
 <html>
   <head>
     <meta charset="UTF-8">
     <title>My Resume</title>
     <style>
+    
       /* Add styles here */
       .header {
+          
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 20px;
+        
+    
       }
       .header h1 {
         font-size: 36px;
@@ -22,8 +27,8 @@
       }
       .header img {
         border-radius: 50%;
-        width: 150px;
-        height: 150px;
+        width: 350px;
+        height: 350px;
         object-fit: cover;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       }
@@ -31,13 +36,15 @@
         font-size: 24px;
         color: #555;
         text-decoration: none;
+        
       }
       .header a:hover {
         color: #000;
       }
       .about-me {
         padding: 20px;
-        background-color: rgba(255,255,255,0.6);
+        #background-color: rgba(255,255,255,0.6);
+        background-color: #efdecd;
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       }
@@ -61,11 +68,26 @@
         border-radius: 10px;
         margin-bottom: 20px;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        
+      }
+        .image-box {
+          flex-basis: 50%;
+          display: flex;
+          justify-content: center;
+      }
+        
+        .image-box img {
+          max-width: 50%;
+          height: 30%;
+          border-radius: 10px;
+          box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
       }
       .menu {
         display: flex;
         justify-content: space-between;
         padding: 20px;
+        
       }
       .menu li {
         position: relative;
@@ -131,20 +153,51 @@
       .perspective-split-text:hover h1::before {
         transform: rotateY(0);
       }
+      .perspective-split-text {
+  background-image: url('https://img.gadgethacks.com/img/05/72/63569450456185/0/get-os-x-el-capitan-ios-9-wallpapers-your-ipad-iphone-mac.w1456.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.perspective-split-text::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  
+  
+}
+
     </style>
   </head>
   <body>
+      
+    <div class="perspective-split-text">
+      <h1 data-text="Resume">Resume</h1>
+      
+      
+      
+
+    </div>
     <div class="header">
       <h1>Patrick James</h1>
       <p>3rd Year student at Aalto University</p>
       <img src="my-image.jpg" alt="My Image">
+      
     </div>
     <div class="about-me">
       <h2>About Me</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-        Sed in euismod enim, at pellentesque lorem. Sed laoreet 
-        libero ac libero fringilla, eu blandit eros bibendum. 
+        Half Finnish / half American Chemical Engineering and Computer Science student. Interested in technology, plants and animals. I hope to work in the semiconductor industry and computer industry, either developing software, making chips, or ideally both! Regardless I want to work with technology of any kind.
       </p>
     </div>
     <div class="essays-container">
@@ -154,36 +207,58 @@
 Team captain and winner of Nexi’s “Crack the Payments” challenge at Junction 2022</h3>
         <p>
             I wrote all of the Python code, made the PyQt5 UI, did documentation and research on the NFC ISO. 
-          The entire code project is visible on my Github page "Junction_nexiproject". 
+          The entire code project is visible on my Github page "Junction_nexiproject". Junction is one of the largest Hackathons in Europe, and for 2022 over two thousand people participated. 
         </p>
+        
       </div>
+      
       <div class="essay-box">
-        <h3>Essay Title 2</h3>
+        <h3>Nokia 8 Custom Rom</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-          Sed in euismod enim, at pellentesque
-          lorem. Sed laoreet 
-          libero ac libero fringilla, eu blandit eros bibendum. 
+          I compiled a custom build of Android 12 for my phone using open source binaries and drivers released by Nokia. This was challenging, as I had never done anything like this, and the guides for building a custom rom were out of date. More info on my GitHub.
         </p>
+        
+        </div>
+        
+      
+      <div class="essay-box">
+        <h4>This Website</h4>
+        <p>
+          Building this website gave me a reason to want to learn HTML and CSS. More info on my GitHub.
+        </p>
+        
+        </div>
+        
+        <div class="essay-box">
+        <h4>Automation scripts</h4>
+        <p>
+          I've used programming, mostly in Python, to help my daily life by automating mundane tasks. One such example is my program to automatically reserve good sauna timeslots for me at our student apartments. It was built using Python and Selenium. More info on my GitHub.
+        </p>
+        </div>
+      
+      <div class="essay-box">
+        <h4>Gardening and botany</h4>
+        <p>
+          One of my favorite hobbies is gardening. I think growing plants is incredibly rewarding and teaching. 
+        </p>
+        </div>
+        
+    
+        
+        <div class="container">
+ 
+    <!--essay content here -->
+  </div>
+  <div class="image-box">
+    <img src="https://i.imgur.com/N6zGxBt.jpeg" alt="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuOkUZTb0k-mV0TurzhNypFxcL1pVWKLPTkg&usqp=CAU">
+
+    </div>
+ 
+    
+  </div>
+</div>
       </div>
     </div>
-    <div class="frosted-glass">
-      <h2>Contact Me</h2>
-      <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        <br><br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <br><br>
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-        <br><br>
-        <button type="submit">Send</button>
-      </form>
-    </div>
-    <div class="perspective-split-text">
-      <h1 data-text="Resume">Resume</h1>
-    </div>
+    
   </body>
 </html>
