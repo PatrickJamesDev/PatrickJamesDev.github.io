@@ -7,14 +7,12 @@
     <style>
     
       /* Add styles here */
+        /* Header styles */
       .header {
-          
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 20px;
-        
-    
       }
       .header h1 {
         font-size: 36px;
@@ -36,14 +34,14 @@
         font-size: 24px;
         color: #555;
         text-decoration: none;
-        
       }
       .header a:hover {
         color: #000;
       }
+      
+      /* About Me section styles */
       .about-me {
         padding: 20px;
-        #background-color: rgba(255,255,255,0.6);
         background-color: #efdecd;
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -56,6 +54,8 @@
         font-size: 24px;
         line-height: 1.5;
       }
+      
+      /* Essays section styles */
       .essays-container {
         background-color: rgba(255,255,255,0.6);
         padding: 20px;
@@ -68,26 +68,24 @@
         border-radius: 10px;
         margin-bottom: 20px;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        
       }
-        .image-box {
-          flex-basis: 50%;
-          display: flex;
-          justify-content: center;
+      .image-box {
+        flex-basis: 50%;
+        display: flex;
+        justify-content: center;
       }
-        
-        .image-box img {
-          max-width: 50%;
-          height: 30%;
-          border-radius: 10px;
-          box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      .image-box img {
+        max-width: 50%;
+        height: 30%;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       }
-      }
+      
+      /* Menu styles */
       .menu {
         display: flex;
         justify-content: space-between;
         padding: 20px;
-        
       }
       .menu li {
         position: relative;
@@ -110,14 +108,15 @@
         background: linear-gradient(to right, #ff416c, #ff4b2b);
         transform-origin: left center;
         transform: skewX(-30deg);
-        transition: all 0.3s ease
-  in-out;
+        transition: all 0.3s ease-in-out;
       }
       .menu a:hover::before {
+
         transform: skewX(0);
         left: -100%;
         right: 100%;
       }
+      /* Styling for the Frosted Glass effect */
       .frosted-glass {
         background: linear-gradient(to bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.3));
         border-radius: 10px;
@@ -154,14 +153,14 @@
         transform: rotateY(0);
       }
       .perspective-split-text {
-  background-image: url('https://img.gadgethacks.com/img/05/72/63569450456185/0/get-os-x-el-capitan-ios-9-wallpapers-your-ipad-iphone-mac.w1456.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+        background-image: url('https://img.gadgethacks.com/img/05/72/63569450456185/0/get-os-x-el-capitan-ios-9-wallpapers-your-ipad-iphone-mac.w1456.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
       }
 
       .perspective-split-text::before {
@@ -197,37 +196,31 @@
     </style>
   </head>
   <body>
-
-      
     <div class="perspective-split-text">
       <h1 data-text="Resume">Resume</h1>
-      
-      
-      
-
     </div>
+    
     <div class="header">
       <h1>Patrick James</h1>
       <p>3rd Year student at Aalto University</p>
       <img src="my-image.jpg" alt="My Image">
-      
     </div>
+    
     <div class="about-me">
       <h2>About Me</h2>
       <p>
         Half Finnish / half American Chemical Engineering and Computer Science student. Interested in technology, plants and animals. I hope to work in the semiconductor industry and computer industry, either developing software, making chips, or ideally both! Regardless I want to work with technology of any kind.
       </p>
     </div>
+    
     <div class="essays-container">
       <h2>Projects and works</h2>
       <div class="essay-box">
-        <h3>
-Team captain and winner of Nexi’s “Crack the Payments” challenge at Junction 2022</h3>
+        <h3>Team captain and winner of Nexi’s “Crack the Payments” challenge at Junction 2022</h3>
         <p>
-            I wrote all of the Python code, made the PyQt5 UI, did documentation and research on the NFC ISO. 
+          I wrote all of the Python code, made the PyQt5 UI, did documentation and research on the NFC ISO. 
           The entire code project is visible on my Github page "Junction_nexiproject". Junction is one of the largest Hackathons in Europe, and for 2022 over two thousand people participated. 
         </p>
-        
       </div>
       
       <div class="essay-box">
@@ -235,48 +228,42 @@ Team captain and winner of Nexi’s “Crack the Payments” challenge at Juncti
         <p>
           I compiled a custom build of Android 12 for my phone using open source binaries and drivers released by Nokia. This was challenging, as I had never done anything like this, and the guides for building a custom rom were out of date. More info on my GitHub.
         </p>
+      </div>
         
-        </div>
-        
-      
       <div class="essay-box">
         <h4>This Website</h4>
         <p>
           Building this website gave me a reason to want to learn HTML and CSS. More info on my GitHub.
         </p>
+      </div>
         
-        </div>
-        
-        <div class="essay-box">
+      <div class="essay-box">
         <h4>Automation scripts</h4>
         <p>
           I've used programming, mostly in Python, to help my daily life by automating mundane tasks. One such example is my program to automatically reserve good sauna timeslots for me at our student apartments. It was built using Python and Selenium. More info on my GitHub.
         </p>
-        </div>
+      </div>
       
       <div class="essay-box">
         <h4>Gardening and botany</h4>
         <p>
-          One of my favorite hobbies is gardening. I think growing plants is incredibly rewarding and teaching. 
+          One of my favorite hobbies is gardening. I think growing plants is incredibly rewarding and teaching. I especially love growing succulents and chili peppers. I'm working on some chili pepper hybrids of my own, very excited about that. The picture below shows one of my best performing varities of summer 2022.
         </p>
-        </div>
+      </div>
         
     
         
         <div class="container">
  
-    <!--essay content here -->
-  </div>
-  <div class="image-box">
-    <img src="https://i.imgur.com/N6zGxBt.jpeg" alt="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuOkUZTb0k-mV0TurzhNypFxcL1pVWKLPTkg&usqp=CAU">
+    
+        </div>
 
-    </div>
+      <div class="image-box">
+        <img src="https://i.imgur.com/N6zGxBt.jpeg">
+
+      </div>
  
     
-  </div>
-</div>
-      </div>
-    </div>
     
   </body>
 </html>
